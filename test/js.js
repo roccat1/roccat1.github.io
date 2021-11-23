@@ -1,3 +1,3 @@
-console.log("Hi");
+h1 = document.getElementById("h1");
 
-alert("a");
+console.log(h1)
