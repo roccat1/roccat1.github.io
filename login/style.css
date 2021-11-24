@@ -1,3 +1,15 @@
+:root{
+    --backgroung-color: rgb(34, 34, 34);
+    --form-outline-color: rgb(104, 104, 104);
+    --form-background-color: rgb(78, 78, 78);
+    --font-color: rgb(0, 0, 0);
+    --font-title-color: rgb(255, 255, 255);
+    --input-background-color: rgb(194, 194, 194);
+    --input-hover-color: rgb(98, 98, 98);
+    --title-outline-color: rgb(46, 46, 46);
+    --title-background-color: rgb(100, 100, 100);
+}
+
 .forms-container{
     display: flex;
     justify-content: space-evenly;
@@ -25,11 +37,31 @@
 }
 
 body{
-    background: rgb(69, 212, 255);
+    background: var(--backgroung-color);
 }
 
 .forms-container form h2{
     margin-bottom: 20px;
+}
+
+.login-sumbit-button{
+    margin-top: 45px;
+}
+
+label{
+    font-size: 20px;
+    color: var(--font-title-color);
+    -webkit-text-stroke: 0.3px black;
+}
+
+input{
+    height: 30px;
+    font-size: 40px;
+    padding-left: 5px;
+    border-radius: 10px;
+    background-color: var(--input-background-color);
+    -webkit-text-stroke: 0.2px black;
+    color: var(--font-color);
 }
 
 .sumbit-button{
@@ -40,52 +72,31 @@ body{
     padding-left: auto;
     padding-right: auto;
     width: 100%;
-}
-
-.login-sumbit-button{
-    margin-top: 45px;
-}
-
-label{
-    font-size: 20px;
-}
-
-input{
-    height: 30px;
-    font-size: 40px;
-    padding-left: 5px;
-    
-    border-radius: 10px;
+    background-color: var(--input-background-color);
+    color: var(--font-color);
 }
 
 .sumbit-button:hover{
-    background: rgb(206, 149, 143);
+    background: var(--input-hover-color);
 }
 
 .forms-container form{
     display: flex;
     flex-direction: column;
-    outline: solid 4px #000;
+    outline: solid 4px var(--form-outline-color);
     margin: 20px;
     padding: 10px;
     border-radius: 20px;
     justify-content: center none;
     width: 700px;
     height: 450px;
+    background: var(--form-background-color);
 }
 
 
 .forms-container form input{
     margin-bottom: 10px;
     max-width: 600px;
-}
-
-.login{
-    background: rgb(133, 217, 245);
-}
-
-.register{
-    background: rgb(133, 217, 245);
 }
 
 .sumbit-button-container{
@@ -100,10 +111,12 @@ h2{
     text-align: center;
     font-size: 35px;
     font-family: sans-serif;
-    background: rgb(112, 210, 243);
+    color: var(--font-title-color);
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
+    background: var(--title-background-color);
     padding: 5px;
     border-radius: 20px;
-    outline: solid rgb(72, 162, 192) 3px;
+    outline: solid var(--title-outline-color) 3px;
 }
 
 label{
