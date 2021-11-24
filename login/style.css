@@ -6,7 +6,17 @@
 .show-passw-button{
     display: inline;
     transform: scale(1.5);
-    padding: 5px;
+}
+
+.show-passw-container{
+    display: grid;
+    grid-template-rows: 30px;
+    grid-template-columns: 30px 300px;
+    margin-bottom: 5px;
+}
+
+.show-passw__label{
+    padding-top: 3px;
 }
 
 .show-passw-label{

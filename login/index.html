@@ -19,8 +19,12 @@
         <label for="login-passw"> Password:</label>
         <input type="password" id="login-passw" >
 
-        <label for="login-passw" class="show-passw-label"> show password?</label>
-        <input type="checkbox"  onclick="logPressed(logShowPasswButton)" class="show-passw-button" id="login__show-passw-button">
+        <div class="show-passw-container">
+            <input type="checkbox"  onclick="logPressed(logShowPasswButton)" class="show-passw-button" id="login__show-passw-button">
+            <div class="show-passw__label">
+                <label for="login-passw" class="show-passw-label"> show password?</label>
+            </div>
+        </div>
 
         <div class="sumbbit-button-container">
         <input type="submit" value="Sumbit" class="sumbit-button login-sumbit-button">
@@ -39,9 +43,12 @@
         <label for="register-passw"> Password:</label>
         <input type="password" id="register-passw" >
 
-        <label for="login-passw" class="show-passw-label"> show password?</label>
-        <input type="checkbox" onclick="regPressed(regShowPasswButton)" class="show-passw-button" id="register__show-passw-button">
-
+        <div class="show-passw-container">
+            <input type="checkbox" onclick="regPressed(regShowPasswButton)" class="show-passw-button" id="register__show-passw-button">
+            <div class="show-passw__label">
+                <label for="login-passw" class="show-passw-label"> show password?</label>
+            </div>
+        </div>
 
         <div class="sumbbit-button-container">
         <input type="submit" value="Sumbit" class="sumbit-button">
