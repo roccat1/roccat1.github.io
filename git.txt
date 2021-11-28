@@ -15,9 +15,9 @@ git diff <file> -canvis
 git log         -info de canvis
 git branch <name>- crear/veure
 git checkout <name> -anar
+git merge <branch>- merge
 
-
-
+h1
 
 
 .gitignore -el que no pujem amb enters
