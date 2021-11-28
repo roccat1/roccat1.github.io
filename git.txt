@@ -12,3 +12,9 @@ git pull        -
 git clone       -
 git checkout -- <file>  -torna
 git diff <file> -canvis
+git log         -info de canvis
+
+
+
+
+.gitignore el que no fa re
