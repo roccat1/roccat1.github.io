@@ -4,7 +4,7 @@ repository
 
 ------git commands---------------
 git init        -crea repository
-git add <file>  -passa a staging
+git add <file>/.-passa a staging
 git status      -com va?
 git commit      -guarda   -m "msg"
 git push        -
