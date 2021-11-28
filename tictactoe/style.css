@@ -1,0 +1,9 @@
+.game{
+    display: grid;
+    grid-template-columns: repeat(3,minmax(10px,200px));
+    grid-template-rows: repeat(1vw,minmax(1vw,200px));
+}
+
+.game img{
+    outline: solid rgb(0, 0, 0) 2px;
+}
