@@ -4,17 +4,20 @@ repository
 
 ------git commands---------------
 git init        -crea repository
-git add <file>  -passa a staging
+git add <file>/.-passa a staging
 git status      -com va?
-git commit      -guarda
-git push        -
-git pull        -
-git clone       -
+git commit      -guarda   -m "msg"
+git push        -penjar
+git pull        -copiar de github
+git clone <link>-per tenirla
 git checkout -- <file>  -torna
 git diff <file> -canvis
 git log         -info de canvis
+git branch <name>- crear/veure
+git checkout <name> -anar
 
 
 
 
-.gitignore el que no fa re
+
+.gitignore -el que no pujem amb enters
