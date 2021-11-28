@@ -6,4 +6,9 @@
 
 .game img{
     outline: solid rgb(0, 0, 0) 2px;
+    user-select: none;
+}
+
+body{
+    padding: 3vw;
 }

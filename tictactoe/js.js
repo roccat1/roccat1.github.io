@@ -8,6 +8,27 @@ const box31 = document.getElementById("box-31");
 const box32 = document.getElementById("box-32");
 const box33 = document.getElementById("box-33");
 
-const box11Click ={console.log("a");}
+var turn = 0;
 
-box11.onclick = box11Click();
+function clicked(who){
+    console.log(who.target.src);
+    if(turn == 0){
+        console.log("b");
+        who.target.src = "O.png"
+        console.log(who.clicked)
+    } else if(turn == 1){
+        console.log("c");
+    } else{
+        console.error("Error 001");
+    }
+}
+
+box11.onclick = clicked;
+box12.onclick = clicked;
+box13.onclick = clicked;
+box21.onclick = clicked;
+box22.onclick = clicked;
+box23.onclick = clicked;
+box31.onclick = clicked;
+box32.onclick = clicked;
+box33.onclick = clicked;
