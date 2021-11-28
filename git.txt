@@ -1,0 +1,12 @@
+working directory
+staging area
+repository
+
+------git commands---------------
+git init        -crea repository
+git add <file>  -passa a staging
+git status      -com va?
+git commit      -
+git push        -
+git pull        -
+git clone       -
