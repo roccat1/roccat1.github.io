@@ -6,7 +6,9 @@ repository
 git init        -crea repository
 git add <file>  -passa a staging
 git status      -com va?
-git commit      -
+git commit      -guarda
 git push        -
 git pull        -
 git clone       -
+git checkout -- <file>  -torna
+git diff <file> -canvis
