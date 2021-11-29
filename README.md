@@ -7,7 +7,7 @@
 -css responsive menu - v1.0      (FV)<br>
 
 <h3>Betas:</h3>
--tictactoe           - v0.1<br>
+-tictactoe           - v0.2<br>
 
 <h3>Alphas:</h3>
 -tuiter              - v0.0.1

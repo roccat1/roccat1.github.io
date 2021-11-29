@@ -8,18 +8,49 @@ const box5 = document.getElementById("box-5");
 const box6 = document.getElementById("box-6");
 const box7 = document.getElementById("box-7");
 const box8 = document.getElementById("box-8");
+const repeatButton = document.querySelector(".repeat-button");
+const advert = document.querySelector(".advertisment");
+const singButton = document.querySelector(".sing-button");
+const multButton = document.querySelector(".mult-button");
 
-//make some var
-var states = [0,0,0,0,0,0,0,0,0]
-var turn = 0;
+var states,turn;
+
+let singButtPressed = () =>{
+    multButton.style.backgroundColor = "rgb(88, 215, 224)";
+    singButton.style.backgroundColor = "rgb(51, 111, 116)";
+}
+
+let multButtPressed = () =>{
+    singButton.style.backgroundColor = "rgb(88, 215, 224)";
+    multButton.style.backgroundColor = "rgb(51, 111, 116)";
+}
+
+let clear = () =>{
+    states = [0,0,0,0,0,0,0,0,0];
+    turn = 0;
+    box0.src = "img/none.png"
+    box1.src = "img/none.png"
+    box2.src = "img/none.png"
+    box3.src = "img/none.png"
+    box4.src = "img/none.png"
+    box5.src = "img/none.png"
+    box6.src = "img/none.png"
+    box7.src = "img/none.png"
+    box8.src = "img/none.png"
+    console.log("cleared");
+    advert.style.display = "none"
+}
 
 //function when you win as argument the state that won
 function win(who){
     if(who == 10){
         console.log("O won");
+        advert.innerHTML = "O won";
     } else{
         console.log("X won");
+        advert.innerHTML = "X won";
     }
+    advert.style.display = "inline"
 }
 
 //function to check if you are wining
@@ -53,26 +84,21 @@ function clicked(who){
     //who.target.id[4] -- num picked
     if(turn == 0){
         if(states[who.target.id[4]] == 0){
-            who.target.src = "O.png";
+            who.target.src = "img/O.png";
             states[who.target.id[4]] = 10;
             turn = 1;
-        } else{
-            console.log("alrady picked")
         }
     } else if(turn == 1){
         if(states[who.target.id[4]] == 0){
-            who.target.src = "X.png";
+            who.target.src = "img/X.png";
             states[who.target.id[4]] = 1;
             turn = 0;
-        } else{
-            console.log("alrady picked")
         }
     } else{
         console.error("Error 001");
     }
     checkWin();
 }
-
 
 //eventListeners preparation
 box1.onclick = clicked;
@@ -84,3 +110,8 @@ box6.onclick = clicked;
 box7.onclick = clicked;
 box8.onclick = clicked;
 box0.onclick = clicked;
+repeatButton.onclick = clear;
+singButton.onclick = singButtPressed;
+multButton.onclick = multButtPressed;
+
+clear();
