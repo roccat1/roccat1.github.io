@@ -8,14 +8,20 @@ body{
 
 .game{
     display: grid;
-    grid-template-columns: repeat(3,minmax(10px,200px));
-    grid-template-rows: repeat(1vw,minmax(1vw,200px));
+    grid-template-columns: repeat(3,minmax(10px,150px));
+    grid-template-rows: repeat(1vw,minmax(1vw,150px));
     justify-content: center;
     margin: 10px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .game img{
     outline: solid rgb(0, 0, 0) 2px;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
     user-select: none;
 }
 
@@ -36,7 +42,7 @@ body{
 .repeat-button-container{
     justify-content: center;
     display: flex;
-    width: 100vw;
+    width: 100%;
 }
 
 .h1{
@@ -52,19 +58,21 @@ body{
 .advert-container{
     display: flex;
     justify-content: center;
+    position: fixed;
+    width: 100%;
 }
 
 .advertisment{
+    top: 40vh;
     display: none;
     position: absolute;
     text-align: center;
     width: 90vw;
-    font-size: 30vw;
-    top: 40vh;
-    background-color: black;
-    color: white;
+    font-size: 10vw;
+    background-color: rgba(0, 0, 0, 0.329);
+    color: rgba(255, 255, 255, 0.733);
     border-radius: 30px;
-    outline: solid red 10px;
+    outline: solid red 5px;
 }
 
 .players-buttons{

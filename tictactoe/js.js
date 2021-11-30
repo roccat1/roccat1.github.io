@@ -1,3 +1,5 @@
+/*TODO: optimize code*/
+
 //first, we identify the boxes
 const box0 = document.getElementById("box-0");
 const box1 = document.getElementById("box-1");
@@ -8,24 +10,46 @@ const box5 = document.getElementById("box-5");
 const box6 = document.getElementById("box-6");
 const box7 = document.getElementById("box-7");
 const box8 = document.getElementById("box-8");
+const boxes = [box0,box1,box2,box3,box4,box5,box6,box7,box8];
 const repeatButton = document.querySelector(".repeat-button");
 const advert = document.querySelector(".advertisment");
 const singButton = document.querySelector(".sing-button");
 const multButton = document.querySelector(".mult-button");
 
-var states,turn;
+var states,turn, mode;
+mode = "1";
+var finished = false;
+let ia =()=>{
+    checkWin();
+    for (let i = 0; i < 8; i++) {
+        if(states[i] == 0 && finished == false){
+            boxes[i].src = "img/X.png"
+            states[i] = 1;
+            turn=0;
+            break;
+        }
+    }
+    checkWin();
+}
+
 
 let singButtPressed = () =>{
     multButton.style.backgroundColor = "rgb(88, 215, 224)";
     singButton.style.backgroundColor = "rgb(51, 111, 116)";
+    mode = "1";
+    if(turn==1){
+        ia();
+    }
 }
 
 let multButtPressed = () =>{
     singButton.style.backgroundColor = "rgb(88, 215, 224)";
     multButton.style.backgroundColor = "rgb(51, 111, 116)";
+    mode ="2";
 }
 
 let clear = () =>{
+    finished = false;
     states = [0,0,0,0,0,0,0,0,0];
     turn = 0;
     box0.src = "img/none.png"
@@ -50,7 +74,8 @@ function win(who){
         console.log("X won");
         advert.innerHTML = "X won";
     }
-    advert.style.display = "inline"
+    advert.style.display = "inline";
+    finished = true;
 }
 
 //function to check if you are wining
@@ -87,12 +112,19 @@ function clicked(who){
             who.target.src = "img/O.png";
             states[who.target.id[4]] = 10;
             turn = 1;
+            if(mode=="1"){
+                if(states.includes(0)){
+                    ia();
+                }
+            }
         }
     } else if(turn == 1){
-        if(states[who.target.id[4]] == 0){
-            who.target.src = "img/X.png";
-            states[who.target.id[4]] = 1;
-            turn = 0;
+        if(mode=="2"){
+            if(states[who.target.id[4]] == 0){
+                who.target.src = "img/X.png";
+                states[who.target.id[4]] = 1;
+                turn = 0;
+            }
         }
     } else{
         console.error("Error 001");
