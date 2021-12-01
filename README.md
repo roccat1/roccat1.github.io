@@ -5,7 +5,7 @@
 -login system        - v1.0     (TODO: change colors)<br>
 -pc-cumponents       - v1.0     (TODO: other tabs)<br>
 -css responsive menu - v1.0     (FV)<br>
--tictactoe           - v1.0     (TODO: optimize js, upgrade IA)<br>
+-tictactoe           - v1.0.1     (TODO: optimize js, upgrade IA)<br>
 
 <h3>Betas:</h3>
 
