@@ -39,6 +39,17 @@ body{
     color: rgb(0, 0, 0);
 }
 
+#advertisment__repeat-button{
+    display: none;
+    height: 50px;
+    width: 100px;
+    font-size: 30px;
+    background-color: rgb(1, 157, 168);
+    color: rgb(0, 0, 0);
+    position: absolute;
+    top: 50vh;
+}
+
 .repeat-button-container{
     justify-content: center;
     display: flex;

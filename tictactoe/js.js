@@ -12,6 +12,7 @@ const box7 = document.getElementById("box-7");
 const box8 = document.getElementById("box-8");
 const boxes = [box0,box1,box2,box3,box4,box5,box6,box7,box8];
 const repeatButton = document.querySelector(".repeat-button");
+const repeatButtonAd = document.querySelector(".advertisment__repeat-button");
 const advert = document.querySelector(".advertisment");
 const singButton = document.querySelector(".sing-button");
 const multButton = document.querySelector(".mult-button");
@@ -62,7 +63,9 @@ let clear = () =>{
     box7.src = "img/none.png"
     box8.src = "img/none.png"
     console.log("cleared");
-    advert.style.display = "none"
+    advert.style.display = "none";
+    repeatButton.style.display = "inline";
+    repeatButtonAd.style.display = "none";
 }
 
 //function when you win as argument the state that won
@@ -75,6 +78,8 @@ function win(who){
         advert.innerHTML = "X won";
     }
     advert.style.display = "inline";
+    repeatButton.style.display = "none";
+    repeatButtonAd.style.display = "inline";
     finished = true;
 }
 
@@ -143,6 +148,7 @@ box7.onclick = clicked;
 box8.onclick = clicked;
 box0.onclick = clicked;
 repeatButton.onclick = clear;
+repeatButtonAd.onclick = clear;
 singButton.onclick = singButtPressed;
 multButton.onclick = multButtPressed;
 
